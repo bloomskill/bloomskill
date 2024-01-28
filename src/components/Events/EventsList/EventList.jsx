@@ -22,7 +22,7 @@ import {
 import defaultImg from 'images/No-image-available.webp';
 import { useEffect, useState } from 'react';
 import { BtnLink } from 'components/baseStyles/Button.styled';
-// import { removeItem } from 'services/localStorService';
+import { removeItem } from 'services/localStorService';
 
 export const EventsList = ({
   events,
@@ -62,11 +62,11 @@ export const EventsList = ({
   };
 
   const handleCleanFilter = () => {
-    // removeItem('selectedDate');
-    // removeItem('filterSelectedLanguages');
-    // removeItem('filterSelectedCategories');
-    // removeItem('filterSelectedPlaces');
-    // removeItem('filterSelectedLocation');
+    removeItem('selectedDate');
+    removeItem('filterSelectedLanguages');
+    removeItem('filterSelectedCategories');
+    removeItem('filterSelectedPlaces');
+    removeItem('filterSelectedLocation');
 
     setSelectedDate(null);
     setSelectedLanguages([]);
