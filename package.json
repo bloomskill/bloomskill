@@ -2,7 +2,7 @@
   "name": "bloomskill",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bloomskill.vercel.app/",
+  "homepage": "https://bloom-skill.vercel.app/",
   "dependencies": {
     "@babel/eslint-parser": "^7.23.3",
     "@emotion/react": "^11.11.3",
