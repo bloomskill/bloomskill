@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.7cda0caf.css",
-    "main.js": "/static/js/main.789ad32f.js",
+    "main.js": "/static/js/main.90e066b9.js",
     "static/css/655.e62eca05.chunk.css": "/static/css/655.e62eca05.chunk.css",
     "static/js/655.85c9a707.chunk.js": "/static/js/655.85c9a707.chunk.js",
     "static/js/571.3dce26ad.chunk.js": "/static/js/571.3dce26ad.chunk.js",
@@ -52,10 +52,11 @@
     "static/media/calendar.svg": "/static/media/calendar.ea90a6a0dd5286eaf9682676d2b33f4d.svg",
     "static/media/language.svg": "/static/media/language.d914ee7db76dd899e5b6b6fd47ab88cd.svg",
     "static/media/location.svg": "/static/media/location.ae3808a70db02e0aadd00ada5d883e5a.svg",
+    "static/media/burgerMenu.svg": "/static/media/burgerMenu.c0234a7086b606cb2fa8c3a0a0650d10.svg",
     "static/media/arrow_down_24px.svg": "/static/media/arrow_down_24px.f14bbed4418947fe952d228732a4dc3a.svg",
     "static/media/arrow_up_24px.svg": "/static/media/arrow_up_24px.454107948fc384b65a83d882f61a33d7.svg",
     "main.7cda0caf.css.map": "/static/css/main.7cda0caf.css.map",
-    "main.789ad32f.js.map": "/static/js/main.789ad32f.js.map",
+    "main.90e066b9.js.map": "/static/js/main.90e066b9.js.map",
     "655.e62eca05.chunk.css.map": "/static/css/655.e62eca05.chunk.css.map",
     "655.85c9a707.chunk.js.map": "/static/js/655.85c9a707.chunk.js.map",
     "571.3dce26ad.chunk.js.map": "/static/js/571.3dce26ad.chunk.js.map",
@@ -79,6 +80,6 @@
   },
   "entrypoints": [
     "static/css/main.7cda0caf.css",
-    "static/js/main.789ad32f.js"
+    "static/js/main.90e066b9.js"
   ]
 }
