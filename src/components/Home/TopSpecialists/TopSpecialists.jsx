@@ -58,6 +58,23 @@ export const TopSpecialists = () => {
           ];
           langData.push(item[0]);
         });
+if(data.length <=4) {
+  data.map(it => {
+    let item = [
+      {
+        _id: it._id,
+        specialistId: it.specialistId,
+        status: it.status,
+        phone: it.phone,
+        email: it.email,
+        ...it[selectedLanguage],
+        rating: it.rating,
+        image: it.image,
+      },
+    ];
+    langData.push(item[0]);
+  });
+}
         setSpecialists(langData);
       } catch (error) {
         setError(error);
@@ -113,9 +130,9 @@ export const TopSpecialists = () => {
                 loopPreventsSliding={true}
                 loopedslides={1}
               >
-                {specialists.slice(0, 5).map(specialist => {
+                {specialists.slice(0, 8).map((specialist, ind) => {
                   return (
-                    <SwiperSlide key={specialist.specialistId}>
+                    <SwiperSlide key={specialist.specialistId + ind}>
                       <TeamListItem>
                         <ImgBox>
                           <ItemImg
@@ -170,9 +187,9 @@ export const TopSpecialists = () => {
                 autoplay={{ delay: 5000 }}
                 effect={'creative'}
               >
-                {specialists.slice(0, 5).map(specialist => {
+                {specialists.slice(0, 8).map((specialist, ind) => {
                   return (
-                    <SwiperSlide key={specialist.specialistId}>
+                    <SwiperSlide key={ind + specialist.specialistId}>
                       <TeamListItem>
                         <ImgBox>
                           <ItemImg
