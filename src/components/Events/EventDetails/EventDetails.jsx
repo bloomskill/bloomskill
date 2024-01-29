@@ -327,8 +327,7 @@ export const EventDetails = ({ activeEvents }) => {
           <EventTextWrapper>
             <EventDescrBox>
               {events &&
-                events.map((ev, idx) => (
-                  <EventDescr key={idx}>{ev.description}</EventDescr>
+                events.map((ev, idx) => (ev.description.split('|&|').map((it, ix)=><EventDescr key={ix} style={{ textAlign: 'justify', textIndent: "60px" }} data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">{it}</EventDescr>)
                 ))}
             </EventDescrBox>
 

@@ -22,6 +22,7 @@ import {
 import { BtnLink } from 'components/baseStyles/Button.styled';
 import {
   DescriptionSection,
+  DescriptionWrapper,
   EventsSection,
   Image,
   MessageSection,
@@ -189,11 +190,13 @@ export const Specialist = ({ specialist }) => {
         >
           {name}
         </Headline>
+    <DescriptionWrapper>
     {descriptionArray && descriptionArray.map(it=><Subtitle key={it} style={{ textAlign: 'justify', textIndent: "60px" }} data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">{it}</Subtitle>)}
+    </DescriptionWrapper>
       </DescriptionSection>
       <EventsSection>
         <Title>
-          {t("Evénements d'expert à venir à un expert")} 
+          {t("Evénements d'expert à venir")} 
           {/* {firstName(name)} */}
         </Title>
         {isLoading ? onLoading() : onLoaded()}
@@ -550,7 +553,7 @@ export const Specialist = ({ specialist }) => {
           )}
       </EventsSection>
       <MessageSection>
-        <Title>{t('Vous avez des question à un expert?')}?</Title>
+        <Title>{t('Vous avez des question à un expert?')}</Title>
         <FormMessage specialist={specialist} />
       </MessageSection>
     </Container>

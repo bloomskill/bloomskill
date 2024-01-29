@@ -20,12 +20,12 @@ export const DescriptionSection = styled(Section)`
 `;
 
 export const Image = styled.img`
-  width: 182px;
+  width: 216px;
   height: 216px;
   /* border-radius: 8px; */
 
   @media screen and (min-width: ${theme.breakpoints.desktop}) {
-    width: 350px;
+    width: 403px;
     height: 403px;
   }
 `;
@@ -49,4 +49,11 @@ export const MessageSection = styled(Section)`
   @media screen and (min-width: ${theme.breakpoints.desktop}) {
     padding-bottom: 120px;
   }
+`;
+export const DescriptionWrapper = styled.div`
+display: flex;
+flex-direction:column;
+justify-content: start ;
+align-items:start;
+gap:4px;
 `;

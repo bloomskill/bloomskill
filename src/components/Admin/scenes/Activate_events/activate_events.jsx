@@ -152,7 +152,7 @@ const Activate_events = () => {
       flex: 1,
       cellClassName: "name-column--cell",
       editable: true,
-      type: "singleSelect", valueOptions: ["Ru", "En", "Fr", "Uk"],
+      type: "singleSelect", valueOptions: ["Ru", "En", "Fr", "Ua"],
     },
     {
       field: "language_secondary",
@@ -160,7 +160,7 @@ const Activate_events = () => {
       flex: 1,
       cellClassName: "name-column--cell",
       editable: true,
-      type: "singleSelect", valueOptions: ["Ru", "En", "Fr", "Uk"],
+      type: "singleSelect", valueOptions: ["Ru", "En", "Fr", "Ua"],
     },
     {
       field: "language_third",
@@ -168,7 +168,7 @@ const Activate_events = () => {
       flex: 1,
       cellClassName: "name-column--cell",
       editable: true,
-      type: "singleSelect", valueOptions: ["Ru", "En", "Fr", "Uk"],
+      type: "singleSelect", valueOptions: ["Ru", "En", "Fr", "Ua"],
     },
     {
       field: "seats",

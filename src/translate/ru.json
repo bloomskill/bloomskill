@@ -41,7 +41,7 @@
   "Voir plus": "Показать больше",
   "Autres evenements": "Другие мероприятия",
   "Nous sommes désolés, l'expert ne fait pas les ateliers ces prochains jours": "Извините, в ближайшее время специалист не проводит мастер-классы",
-  "Vous avez des question à un expert?": "Есть вопросы к специалисту",
+  "Vous avez des question à un expert?": "Есть вопросы к специалисту?",
   "Questions": "Есть вопросы",
   "Date": "дата",
   "Heure": "время",
@@ -51,5 +51,5 @@
   "Prix": "цена",
   "Il y a des places disponibles": "Есть свободные места",
   "Il n'y a pas des places disponible": "Свободных мест нет",
-  "Evénements d'expert à venir à un expert": "Ближайшие мероприятия специалиста"
+  "Evénements d'expert à venir": "Ближайшие мероприятия специалиста"
 }
