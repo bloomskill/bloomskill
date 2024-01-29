@@ -29,6 +29,7 @@ import {
   DateTime,
   ViewportBox,
   EventList,
+  EventImgContainer,
 } from './TopEvents.styled';
 
 export const TopEvents = () => {
@@ -211,6 +212,7 @@ export const TopEvents = () => {
                       <SwiperSlide key={i}>
                         <EventList>
                           <EventListItem>
+                          <EventImgContainer>
                             <ItemImg
                               src={
                                 event.image
@@ -225,6 +227,7 @@ export const TopEvents = () => {
                               height="366"
                               loading="lazy"
                             ></ItemImg>
+                          </EventImgContainer>
                             <DetailsWrapper>
                               <Name>{event.name}</Name>
                               <DateTimeWrapper>
@@ -282,20 +285,22 @@ export const TopEvents = () => {
                     return (
                       <SwiperSlide key={i}>
                         <EventListItem>
-                          <ItemImg
-                            src={
-                              event.image
-                                ? BASE_URL_IMG +
-                                  event.image.split('/')[
-                                    event.image.split('/').length - 1
-                                  ]
-                                : defaultImg
-                            }
-                            alt={event.name}
-                            width="402"
-                            height="366"
-                            loading="lazy"
-                          ></ItemImg>
+                        <EventImgContainer>
+                            <ItemImg
+                              src={
+                                event.image
+                                  ? BASE_URL_IMG +
+                                    event.image.split('/')[
+                                      event.image.split('/').length - 1
+                                    ]
+                                  : defaultImg
+                              }
+                              alt={event.name}
+                              width="402"
+                              height="366"
+                              loading="lazy"
+                            ></ItemImg>
+                          </EventImgContainer>
                           <DetailsWrapper>
                             <Name>{event.name}</Name>
                             <DateTimeWrapper>

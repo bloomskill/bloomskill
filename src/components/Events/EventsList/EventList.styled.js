@@ -30,6 +30,7 @@ export const EventNavLink = styled.div`
 export const EventImages = styled.img`
   width: 350px;
   height: 300px;
+  object-fit: cover;
   /* border-radius: 40px; */
   /* transition: ${theme.transition}; */
 

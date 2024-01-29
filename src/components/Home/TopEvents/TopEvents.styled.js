@@ -1,7 +1,7 @@
-import { NavLink } from 'react-router-dom';
-import styled, { keyframes } from 'styled-components';
-import { theme } from 'components/baseStyles/Variables.styled';
-import { Section } from 'components/baseStyles/CommonStyle.styled';
+import { NavLink } from "react-router-dom";
+import styled, { keyframes } from "styled-components";
+import { theme } from "components/baseStyles/Variables.styled";
+import { Section } from "components/baseStyles/CommonStyle.styled";
 
 const fadeInUp = keyframes`
   from {
@@ -62,26 +62,33 @@ export const EventListItem = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   cursor: pointer;
+`;
+export const EventImgContainer = styled.div`
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
 `;
 
 export const ViewportBox = styled.div`
-  display: ${props => (props.$mobile ? 'block' : 'none')};
+  display: ${(props) => (props.$mobile ? "block" : "none")};
 
   @media screen and (min-width: ${theme.breakpoints.desktop}) {
-    display: ${props => (props.$mobile ? 'none' : 'block')};
+    display: ${(props) => (props.$mobile ? "none" : "block")};
   }
 `;
 
 export const ItemImg = styled.img`
   width: 350px;
   height: 300px;
+  object-fit: cover;
   /* border-radius: 40px; */
 
   @media screen and (min-width: ${theme.breakpoints.desktop}) {
     width: 402px;
     height: 366px;
+    object-fit: cover;
   }
 `;
 
