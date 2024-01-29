@@ -380,9 +380,9 @@ export const EventsList = ({
                       </DetailsBox>
 
                       <DetailsBoxDiscr>
-                        {event.description.length > 50
-                          ? event.description.slice(0, 50) + ' ...'
-                          : event.description}
+                        {event.description.split('|&|').join(' ').length > 50
+                          ? event.description.split('|&|').join(' ').slice(0, 50) + ' ...'
+                          : event.description.split('|&|').join(' ')}
                       </DetailsBoxDiscr>
 
                       <BtnLink to={`/events/${event._id}`}>
