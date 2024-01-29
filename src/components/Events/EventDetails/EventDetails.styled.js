@@ -158,11 +158,11 @@ export const EventTextWrapper = styled.div`
 `;
 
 export const EventDescrBox = styled.div`
-  /* margin-bottom: 15px;
-
-  @media screen and (min-width: ${theme.breakpoints.tablet}) {
-    margin-bottom: 25px;
-  } */
+display: flex;
+flex-direction:column;
+justify-content: start ;
+align-items:start;
+gap:4px;
 `;
 export const EventDescrBoxTitle = styled.p`
   color: ${theme.colors.grey1};
