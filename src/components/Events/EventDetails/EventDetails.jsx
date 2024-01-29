@@ -21,6 +21,7 @@ import {
   HeadingItem,
   HeadingItemData,
   HeadingItemDataBox,
+  HeadingItemDataSpan,
   HeadingItemTitle,
   ImgBthBox,
   InfoBox,
@@ -238,9 +239,9 @@ export const EventDetails = ({ activeEvents }) => {
               </HeadingItem>
               <HeadingItem>
                 <HeadingItemTitle>{t('Localisation')}</HeadingItemTitle>
-                <HeadingItemData>
-                  {location} <br /> <br /> {address}
-                </HeadingItemData>
+                <HeadingItemDataSpan>
+                  {location}<br /> <br /> {address}
+                </HeadingItemDataSpan>
               </HeadingItem>
             </EventHeading>
 
@@ -250,7 +251,7 @@ export const EventDetails = ({ activeEvents }) => {
                 src={
                   image
                     ? BASE_URL_IMG +
-                      image.split('/')[image.split('/').length - 1]
+                    image.split('/')[image.split('/').length - 1]
                     : defaultImg
                 }
                 alt={events.name}
@@ -327,7 +328,7 @@ export const EventDetails = ({ activeEvents }) => {
           <EventTextWrapper>
             <EventDescrBox>
               {events &&
-                events.map((ev, idx) => (ev.description.split('|&|').map((it, ix)=><EventDescr key={ix} style={{ textAlign: 'justify', textIndent: "60px" }} data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">{it}</EventDescr>)
+                events.map((ev, idx) => (ev.description.split('|&|').map((it, ix) => <EventDescr key={ix} style={{ textAlign: 'justify', textIndent: "60px" }} data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">{it}</EventDescr>)
                 ))}
             </EventDescrBox>
 
