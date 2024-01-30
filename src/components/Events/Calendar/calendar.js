@@ -25,6 +25,7 @@ const Calendar = ({
   setCurrentWeek,
   selectedDate,
   setSelectedDate,
+  setState
 }) => {
   const [currentMonth, setCurrentMonth] = useState(
     selectedDate ? selectedDate : new Date()
@@ -58,6 +59,7 @@ const Calendar = ({
       setSelectedDate(null);
       // saveToStorage('selectedDate', null);
     }
+    setState(false)
   };
 
   const onDateClickHandle = (day, dayStr) => {
@@ -198,4 +200,5 @@ Calendar.propTypes = {
   setCurrentWeek: PropTypes.any,
   selectedDate: PropTypes.any,
   setSelectedDate: PropTypes.any,
+  setState: PropTypes.any,
 };

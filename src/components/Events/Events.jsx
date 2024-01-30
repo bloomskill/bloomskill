@@ -49,6 +49,7 @@ export const Events = () => {
   const { selectedLanguage } = useContext(StatusContext);
   const { t } = useTranslation();
   const [activeEvents, setActiveEvents] = useState([]);
+  const [state, setState] = useState(true);
 
   useEffect(() => {
     (async function getData() {
@@ -138,6 +139,7 @@ export const Events = () => {
           selectedDate={selectedDate}
           setCurrentWeek={setCurrentWeek}
           setSelectedDate={setSelectedDate}
+          setState={setState}
         />
         <Filters
           activeEvents={activeEvents}
@@ -168,6 +170,8 @@ export const Events = () => {
             setSelectedCategories={setSelectedCategories}
             setSelectedLocations={setSelectedLocations}
             setSelectedPlaces={setSelectedPlaces}
+            state={state}
+            setState={setState}
           />
         )}
       </Container>
