@@ -80,6 +80,8 @@ export const ViewportBox = styled.div`
 `;
 
 export const ItemImg = styled.img`
+  margin-left: auto;
+  margin-right: auto;
   width: 350px;
   height: 300px;
   object-fit: cover;

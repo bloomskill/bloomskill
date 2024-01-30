@@ -210,8 +210,8 @@ export const TopEvents = () => {
                   .map((event, i) => {
                     return (
                       <SwiperSlide key={i}>
-                        <EventList>
-                          <EventListItem>
+                        {/* <EventList> */}
+                          {/* <EventListItem> */}
                           <EventImgContainer>
                             <ItemImg
                               src={
@@ -251,8 +251,8 @@ export const TopEvents = () => {
                                 <span>{t('Suivant')}</span>
                               </BtnLink>
                             </DetailsWrapper>
-                          </EventListItem>
-                        </EventList>
+                          {/* </EventListItem> */}
+                        {/* </EventList> */}
                       </SwiperSlide>
                     );
                   })}

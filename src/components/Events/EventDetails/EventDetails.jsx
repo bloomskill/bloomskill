@@ -239,9 +239,9 @@ export const EventDetails = ({ activeEvents }) => {
               </HeadingItem>
               <HeadingItem>
                 <HeadingItemTitle>{t('Localisation')}</HeadingItemTitle>
-                <HeadingItemDataSpan>
-                  {location}<br /> <br /> {address}
-                </HeadingItemDataSpan>
+                <HeadingItemData>
+                  {location} <br/> <br/> {address}
+                </HeadingItemData>
               </HeadingItem>
             </EventHeading>
 
