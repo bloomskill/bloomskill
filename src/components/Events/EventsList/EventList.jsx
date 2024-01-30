@@ -49,7 +49,6 @@ export const EventsList = ({
   const [noEvents, setNoEvents] = useState(false);
   const [activeEventsArr, setActiveEventsArr] = useState([]);
   const [activeFilteredEvents, setActiveFilteredEvents] = useState([]);
-  // const [state, setState] = useState(true);
  
   const handleMouseEnter = i => {
     setHovered(i);
