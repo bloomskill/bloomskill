@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { theme } from 'components/baseStyles/Variables.styled';
 import { Container } from 'components/baseStyles/CommonStyle.styled';
+import { ReactComponent as BurgerMenu } from 'images/burgerMenu.svg';
 
 export const SHeader = styled.header`
   position: fixed;
@@ -82,6 +83,17 @@ export const Wrap = styled.div`
   }
 `;
 
+export const BurgerBtn = styled(BurgerMenu)`
+// width: 30px;
+// height: 30px;
+// transition: ${theme.transition};
+
+// &:hover,
+// &:focus {
+//   fill: ${theme.colors.black};
+// }
+`;
+
 export const MenuBtn = styled.button`
   /* position: fixed;
   top: 20px;
@@ -117,5 +129,10 @@ export const MenuBtn = styled.button`
 
   & > svg {
     fill: currentColor;
+  }
+
+  &> BurgerBtn {
+    fill: currentColor;
+    
   }
 `;
