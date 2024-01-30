@@ -37,8 +37,8 @@ export const HeroSection = styled(Section)`
   background-position: center;
   background-size: cover;
 
-  background-image: url(${hero_jpg});
-  background-image: -webkit-image-set(url(${hero_webp}) 1x);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url(${hero_jpg});
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), -webkit-image-set(url(${hero_webp}) 1x);
   /* 
   background-image: url(${hero_mob_png});
   background-image: -webkit-image-set(url(${hero_mob_webp}) 1x); */
