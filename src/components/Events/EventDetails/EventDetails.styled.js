@@ -138,6 +138,13 @@ export const HeadingItemData = styled.span`
   }
 `;
 
+export const HeadingItemDataSpan = styled(HeadingItemData)`
+  width: 80px;
+  @media screen and (min-width: ${theme.breakpoints.tablet}) {
+    width: 100%;
+  }
+`;
+
 export const EventImage = styled.img`
   /* width: 100%;
   height: auto; */

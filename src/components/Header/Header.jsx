@@ -11,6 +11,7 @@ import {
   Navigation,
   Wrap,
   MenuBtn,
+  BurgerBtn,
 } from './Header.styled';
 
 export const Header = () => {
@@ -74,13 +75,15 @@ export const Header = () => {
               aria-controls="mobile-menu"
               onClick={toggleModal}
             >
-              <svg width="30" height="30">
-                {!showMenu ? (
-                  <use href={sprite + '#menu_40px'}></use>
-                ) : (
+              {!showMenu ? (
+                // <use href={sprite + '#menu_40px'}></use>
+                <BurgerBtn />
+              ) : (
+                <svg width="30" height="30">
                   <use href={sprite + '#close_40px'}></use>
-                )}
-              </svg>
+                </svg>
+
+              )}
             </MenuBtn>
           </Wrap>
         </HeaderContainer>
