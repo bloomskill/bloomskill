@@ -24,7 +24,7 @@ export const Footer = () => {
             <ul>
               <li>
                 <a href="mailto:bloomskill.fr@gmail.com" aria-label="email">
-                bloomskill.fr@gmail.com
+                  bloomskill.fr@gmail.com
                 </a>
               </li>
               <li>
@@ -60,12 +60,13 @@ export const Footer = () => {
         <CopyrightBox>
           <Copyright> &#169; 2023 | All Rights Reserved |</Copyright>
           <Developers>
-            <span>Designed and Developed by </span>
             <a
               href="https://brand-maze.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Brand Maze website"
             >
-              Brand Maze
+              Designed and Developed by Brand Maze
             </a>
           </Developers>
         </CopyrightBox>
