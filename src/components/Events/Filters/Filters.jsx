@@ -252,11 +252,11 @@ export const Filters = ({
                     <FiltersMenuOpenLabel>
                       <FiltersMenuOpenInput
                         type="checkbox"
-                        checked={selectedLanguages.includes('Uk')}
-                        onChange={() => handleLanguageSelect('Uk')}
+                        checked={selectedLanguages.includes('Ua')}
+                        onChange={() => handleLanguageSelect('Ua')}
                       />
                       <FiltersMenuOpenText
-                        checked={selectedLanguages.includes('Uk')}
+                        checked={selectedLanguages.includes('Ua')}
                       >
                         {t('Ukrainien')}
                       </FiltersMenuOpenText>
@@ -472,11 +472,11 @@ export const Filters = ({
                   <FiltersMenuOpenLabel>
                     <FiltersMenuOpenInput
                       type="checkbox"
-                      checked={selectedLanguages.includes('Uk')}
-                      onChange={() => handleLanguageSelect('Uk')}
+                      checked={selectedLanguages.includes('Ua')}
+                      onChange={() => handleLanguageSelect('Ua')}
                     />
                     <FiltersMenuOpenText
-                      checked={selectedLanguages.includes('Uk')}
+                      checked={selectedLanguages.includes('Ua')}
                     >
                       {t('Ukrainien')}
                     </FiltersMenuOpenText>
