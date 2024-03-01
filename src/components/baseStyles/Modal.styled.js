@@ -38,13 +38,15 @@ export const Modal = styled.div`
 
   @media screen and (min-width: ${theme.breakpoints.tablet}) {
     width: 700px;
-    height: 730px;
+    /* height: 730px; */
+    height: 680px;
     padding: 65px 89px;  
   }
 
   @media screen and (min-width: ${theme.breakpoints.desktop}) {
     width: 700px;
-    height: 730px;
+    /* height: 730px; */
+    height: 884px;
     padding: 65px 89px;  
   }
 `;
