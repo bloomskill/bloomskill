@@ -50,6 +50,7 @@ export const RegisterModal = ({ activeEvents }) => {
       .min(2, 'Too Short!')
       .max(50, 'Too Long!')
       .required('Required'),
+    phone: Yup.string().required('Required'),
     email: Yup.string().email('Invalid email').required('Required'),
   });
 
@@ -59,6 +60,7 @@ export const RegisterModal = ({ activeEvents }) => {
     values.date = activeEvents.date;
     values.time = activeEvents.time;
     values.userName = values.name;
+    values.userPhone = values.phone;
     values.userEmail = values.email;
     values.bookingSeats = values.seats;
     values.priceTotal = values.seats * activeEvents.price;
@@ -106,6 +108,7 @@ export const RegisterModal = ({ activeEvents }) => {
               initialValues={{
                 name: '',
                 email: '',
+                phone: '',
                 seats: '1',
               }}
               onSubmit={(values, { setSubmitting, resetForm }) => {
@@ -174,6 +177,28 @@ export const RegisterModal = ({ activeEvents }) => {
                       />
                       {errors.name && touched.name ? (
                         <Error>{errors.name}</Error>
+                      ) : null}
+                    </FormLabel>
+                    <FormLabel htmlFor="phone">
+                      <FormName>{t('Téléphone')}</FormName>
+                      <FormInput
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        placeholder="+330135682450"
+                        value={values.phone}
+                        pattern="[0-9+]+"
+                        onKeyPress={e => {
+                          const num = /^[0-9+]+$/;
+                          const key = e.key;
+                          if (!num.test(key)) {
+                            e.preventDefault();
+                          }
+                        }}
+                        required
+                      />
+                      {errors.phone && touched.phone ? (
+                        <Error>{errors.phone}</Error>
                       ) : null}
                     </FormLabel>
                     <FormLabel htmlFor="email">
