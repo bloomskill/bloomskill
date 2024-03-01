@@ -79,6 +79,7 @@ const Orders = () => {
     data.time = ordersList[it].time;
     data.userName = ordersList[it].userName;
     data.userEmail = ordersList[it].userEmail;
+    data.userPhone = ordersList[it].userPhone;
     data.bookingSeats = ordersList[it].bookingSeats;
     data.priceTotal = ordersList[it].priceTotal;
     data.status = ordersList[it].status;
@@ -123,6 +124,13 @@ const Orders = () => {
     {
       field: "userEmail",
       headerName: "User Email",
+      flex: 1,
+      cellClassName: "name-column--cell",
+      editable: true,
+    },
+    {
+      field: "userPhone",
+      headerName: "User Phone",
       flex: 1,
       cellClassName: "name-column--cell",
       editable: true,
