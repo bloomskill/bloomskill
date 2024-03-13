@@ -177,7 +177,7 @@ export const EventsList = ({
         selectedCategories.map(activeEvent => {
           if (
             activeEvent === it.category ||
-            activeEvent === it.category_secondary ||
+            activeEvent === it.category_second ||
             activeEvent === it.category_third
           ) {
             lab.push(it);
@@ -194,7 +194,6 @@ export const EventsList = ({
     } else {
       ARR_C = ARR_L.map(it => it);
     }
-
     let ARR_Loc = [];
     if (selectedLocations.length > 0) {
       let lab = [];
