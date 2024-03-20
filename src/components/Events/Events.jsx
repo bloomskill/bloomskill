@@ -10,6 +10,7 @@ import { StatusContext } from 'components/ContextStatus/ContextStatus';
 import Calendar from './Calendar/calendar';
 import { Filters } from './Filters/Filters';
 import { getFromStorage } from 'services/localStorService';
+import { useLocation } from 'react-router-dom';
 
 export const Events = () => {
   const [events, setEvents] = useState([]);
@@ -50,7 +51,7 @@ export const Events = () => {
   const { t } = useTranslation();
   const [activeEvents, setActiveEvents] = useState([]);
   const [state, setState] = useState(true);
-
+  const location = useLocation();
   useEffect(() => {
     (async function getData() {
       setIsLoading(true);
@@ -84,7 +85,7 @@ export const Events = () => {
         setIsLoading(false);
       }
     })();
-  }, [selectedLanguage]);
+  }, [selectedLanguage, location]);
 
   useEffect(() => {
     (async function getData() {
@@ -122,7 +123,7 @@ export const Events = () => {
         setIsLoading(false);
       }
     })();
-  }, [selectedLanguage]);
+  }, [selectedLanguage, location]);
 
   const showDetailsHandle = dayStr => {
     setData(dayStr);
