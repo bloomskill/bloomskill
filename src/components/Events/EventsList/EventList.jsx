@@ -23,6 +23,7 @@ import defaultImg from 'images/No-image-available.webp';
 import { useEffect, useState } from 'react';
 import { BtnLink } from 'components/baseStyles/Button.styled';
 import { removeItem } from 'services/localStorService';
+import { useLocation } from 'react-router-dom';
 
 export const EventsList = ({
   events,
@@ -49,7 +50,7 @@ export const EventsList = ({
   const [noEvents, setNoEvents] = useState(false);
   const [activeEventsArr, setActiveEventsArr] = useState([]);
   const [activeFilteredEvents, setActiveFilteredEvents] = useState([]);
-
+  const location = useLocation();
   const handleMouseEnter = i => {
     setHovered(i);
   };
@@ -141,7 +142,7 @@ export const EventsList = ({
       func();
       setState(true)
     }
-  }, [activeEvents, events, currentWeek, selectedDate, state]);
+  }, [activeEvents, events, currentWeek, selectedDate, state, location]);
 
   useEffect(() => {
     const func = () => {
