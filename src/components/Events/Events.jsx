@@ -12,6 +12,7 @@ import { Filters } from './Filters/Filters';
 import { getFromStorage } from 'services/localStorService';
 import { useLocation } from 'react-router-dom';
 
+
 export const Events = () => {
   const [events, setEvents] = useState([]);
   const [error, setError] = useState('');
