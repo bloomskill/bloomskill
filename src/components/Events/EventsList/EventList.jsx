@@ -138,10 +138,7 @@ export const EventsList = ({
     }
   };
   func();
-    if(!state){
-      func();
-      setState(true)
-    }
+  setState(true)
   }, []);
 
   useEffect(() => {

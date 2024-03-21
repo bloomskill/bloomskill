@@ -155,7 +155,7 @@ export const Events = () => {
         />
         {isLoading ? onLoading() : onLoaded()}
         {error && onFetchError('Whoops, something went wrong')}
-        {events.length > 0 && !error && (
+        {!error && (
           <EventsList
             events={events}
             activeEvents={activeEvents}
