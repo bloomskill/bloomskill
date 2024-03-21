@@ -191,7 +191,7 @@ export const Specialist = ({ specialist }) => {
           {name}
         </Headline>
     <DescriptionWrapper>
-    {descriptionArray && descriptionArray.map(it=><Subtitle key={it} style={{ textAlign: 'justify', textIndent: "60px" }} data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">{it}</Subtitle>)}
+    {descriptionArray && descriptionArray.map(it=><Subtitle key={it} style={{ textAlign: 'justify', textIndent: "60px" }} data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000" dangerouslySetInnerHTML={{ __html: it }}/>)}
     </DescriptionWrapper>
       </DescriptionSection>
       <EventsSection>
