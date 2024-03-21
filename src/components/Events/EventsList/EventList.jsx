@@ -23,7 +23,7 @@ import defaultImg from 'images/No-image-available.webp';
 import { useEffect, useState } from 'react';
 import { BtnLink } from 'components/baseStyles/Button.styled';
 import { removeItem } from 'services/localStorService';
-import { useLocation } from 'react-router-dom';
+
 
 export const EventsList = ({
   events,
@@ -50,7 +50,7 @@ export const EventsList = ({
   const [noEvents, setNoEvents] = useState(false);
   const [activeEventsArr, setActiveEventsArr] = useState([]);
   const [activeFilteredEvents, setActiveFilteredEvents] = useState([]);
-  const location = useLocation();
+
   const handleMouseEnter = i => {
     setHovered(i);
   };
@@ -142,7 +142,73 @@ export const EventsList = ({
       func();
       setState(true)
     }
-  }, [activeEvents, events, currentWeek, selectedDate, state, location]);
+  }, []);
+
+  useEffect(() => {
+    const func = () => {
+    const newFilteredWeek = activeEvents
+      .filter(week =>
+        currentWeek.some(
+          day => new Date(week.date).toLocaleDateString() === day
+        )
+      )
+      .filter(event => event.status === 'active');
+    let array = [];
+    newFilteredWeek.map(it => {
+      events.map(item => {
+        if (it.eventId === item.article_event && it.status === 'active') {
+          let data = {};
+          (data._id = it._id),
+            (data.article_event = item.article_event),
+            (data.language = it.language),
+            (data.language_secondary = it.language_secondary),
+            (data.language_third = it.language_third),
+            (data.price = it.price),
+            (data.date = it.date),
+            (data.time = it.time),
+            (data.location = it.location),
+            (data.address = it.address),
+            (data.seats = it.seats),
+            (data.booking = it.booking),
+            (data.vacancies = it.vacancies),
+            (data.image = item.image),
+            (data.image_1 = item.image_1),
+            (data.image_2 = item.image_2),
+            (data.rating = item.rating),
+            (data.duration = item.duration),
+            (data.category = item.category),
+            (data.category_second = item.category_second),
+            (data.category_third = item.category_third),
+            (data.specialistId = item.specialistId),
+            (data.description = item.description),
+            (data.name = item.name),
+            (data.status = item.status),
+            array.push(data);
+        }
+      });
+    });
+    setActiveEventsArr(array);
+    if (selectedDate) {
+      const newFilteredEvents = activeEventsArr.filter(
+        event =>
+          new Date(event.date).toLocaleDateString() ===
+          new Date(selectedDate).toLocaleDateString()
+      );
+      setFilteredEvents(newFilteredEvents);
+      setActiveFilteredEvents(newFilteredEvents);
+      setNoEvents(newFilteredEvents.length === 0);
+    } else {
+      setFilteredEvents(array);
+      setActiveFilteredEvents(array);
+      setNoEvents(false);
+    }
+  };
+  func();
+    if(!state){
+      func();
+      setState(true)
+    }
+  }, [activeEvents, events, currentWeek, selectedDate, state]);
 
   useEffect(() => {
     const func = () => {
